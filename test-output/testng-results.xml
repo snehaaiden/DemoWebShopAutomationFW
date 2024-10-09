@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-10-09T12:14:14 IST" name="Default suite" finished-at="2024-10-09T12:14:33 IST" duration-ms="19178">
+    <groups>
+    </groups>
+    <test started-at="2024-10-09T12:14:14 IST" name="Default test" finished-at="2024-10-09T12:14:33 IST" duration-ms="19178">
+      <class name="com.demoshop.tests.EmailAFriendTest">
+        <test-method is-config="true" signature="initDriver(java.lang.String)[pri:0, instance:com.demoshop.tests.EmailAFriendTest@f6efaab]" started-at="2024-10-09T12:14:14 IST" name="initDriver" finished-at="2024-10-09T12:14:22 IST" duration-ms="7922" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method signature="UserIsAbleToEmailAProductToAFriend()[pri:0, instance:com.demoshop.tests.EmailAFriendTest@f6efaab]" started-at="2024-10-09T12:14:22 IST" name="UserIsAbleToEmailAProductToAFriend" finished-at="2024-10-09T12:14:33 IST" duration-ms="11162" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UserIsAbleToEmailAProductToAFriend -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.demoshop.tests.EmailAFriendTest@f6efaab]" started-at="2024-10-09T12:14:33 IST" name="tearDown" finished-at="2024-10-09T12:14:33 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.demoshop.tests.EmailAFriendTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
