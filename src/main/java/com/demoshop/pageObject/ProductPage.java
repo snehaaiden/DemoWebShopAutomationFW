@@ -2,6 +2,7 @@ package com.demoshop.pageObject;
 
 import java.util.List;
 
+
 import org.openqa.selenium.WebDriver;
 
 import org.openqa.selenium.WebElement;
@@ -61,6 +62,22 @@ private WebDriver driver;
 	
 	@FindBy(css=".product-title ")
 	private WebElement productTitle;
+	
+			
+	@FindBy(css="[title=\"Show details for Blue and green Sneaker\"]")
+	private WebElement selectProduct;
+	
+	@FindBy(css="#add-to-wishlist-button-28")
+	private WebElement wishlistBtn;
+	
+	
+	@FindBy(css=".ico-wishlist")
+	private WebElement wishlist;
+	
+	@FindBy(xpath="//*[contains(text(),'Blue and green Sneaker')]")
+	private WebElement prd;		
+	
+	
 
 	public List<String> getSearchedProductList()
 	{
@@ -99,4 +116,21 @@ private WebDriver driver;
 	{
 		return getElementText(productTitle);
 	}
+	public void selectPrd()
+	{
+		clickElement(selectProduct);
+	}
+	public void wishList()
+	{
+		clickElement(wishlistBtn);
+	}
+	public void viewwishList()
+	{
+		clickElement(wishlist);
+	}
+	public String prdTxt()
+	{
+		return getElementText(prd);
+	}
+	
 }

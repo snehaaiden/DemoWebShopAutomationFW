@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 
 import com.demoshop.pageObject.LoginPage;
 import com.demoshop.pageObject.RegisterPage;
+import com.demoshop.utils.DataUtils;
 import com.demoshop.utils.ExcelReader;
 import com.demoshop.utils.UniqueGenerator;
 import com.github.javafaker.Faker;
@@ -21,14 +22,9 @@ public class ExcelRegistrationTest extends BaseTest{
 	public void verifyUserIsAbleToRegisterUsingCorrectCreds() {
 		
 		loginPage.navigateToRegisterationSection();
-		
-		Faker faker= new Faker();
-		String firstName= faker.name().firstName();
-		String lastName= faker.name().lastName();
-		String uniqueEmail = faker.internet().emailAddress();
-		String password= faker.internet().password();
-		registerPage.setUserData(firstName, lastName, uniqueEmail, password);
+		DataUtils.initUserData();
+		registerPage.setUserData(DataUtils.firstName, DataUtils.lastName, DataUtils.uniqueEmail, DataUtils.password);
 	    String expectedEmail = loginPage.getLoggedEmail();
-		Assert.assertEquals(uniqueEmail, expectedEmail, "Registered email is differents");
+		Assert.assertEquals(DataUtils.uniqueEmail, expectedEmail, "Registered email is differents");
 	}
 }

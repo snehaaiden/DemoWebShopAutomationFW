@@ -11,29 +11,30 @@ import com.demoshop.utils.ReportUtil;
 
 public class ReportListener implements ITestListener {
 
-	 ExtentReports extent=ReportUtil.generateReport();
-	 ExtentTest test;
+	ExtentReports extent=ReportUtil.generateReport();
+	 ThreadLocal<ExtentTest> extentTest= new ThreadLocal<>();
+	 
 	 
 	@Override
 	public void onTestStart(ITestResult result) {
-		test = extent.createTest(result.getMethod().getMethodName());
-		System.out.println("Test started: " +result.getMethod().getMethodName());
+		ExtentTest test = extent.createTest(result.getMethod().getMethodName());
+		extentTest.set(test);
 	}
+
 	@Override
 	public void onTestSuccess(ITestResult result) {
-		test.log(Status.PASS, "Test Passed");
-		System.out.println("Test successfull");
+		extentTest.get().log(Status.PASS, "Test Passed");
 	}
+
 	@Override
 	public void onTestFailure(ITestResult result) {
-		test.log(Status.FAIL, result.getThrowable());
-		System.out.println("Test failed");
-
+		extentTest.get().log(Status.FAIL, result.getThrowable());
+		
 	}
+
 	@Override
 	public void onFinish(ITestContext context) {
 		extent.flush();
-		System.out.println("Test finished");
 
 	}
 	

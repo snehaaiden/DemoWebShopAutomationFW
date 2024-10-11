@@ -1,8 +1,12 @@
 package com.demoshop.tests;
 
 import java.io.IOException;
+
+
 import java.time.Duration;
 import java.util.Properties;
+import org.testng.annotations.Parameters;
+
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,7 +16,6 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 
-import com.beust.jcommander.Parameters;
 import com.demoshop.pageObject.LoginPage;
 import com.demoshop.pageObject.ProductPage;
 import com.demoshop.pageObject.RegisterPage;
@@ -70,6 +73,7 @@ public class BaseTest {
 		loginPage= new LoginPage(driver);
 	    registerPage = new RegisterPage(driver);
 	    productPage = new ProductPage(driver);
+	    shoppingCartPage= new ShoppingCartPage(driver);
 	}
 	
 	@AfterMethod(alwaysRun=true)

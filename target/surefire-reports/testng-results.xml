@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-10-11T01:08:24 IST" name="Suite" finished-at="2024-10-11T01:08:34 IST" duration-ms="9887">
+    <groups>
+      <group name="Smoke">
+        <method signature="SubscriptionTest.verifyUserIsAbleToSubscribeWithValidEmail()[pri:0, instance:com.demoshop.tests.SubscriptionTest@c430e6c]" name="verifyUserIsAbleToSubscribeWithValidEmail" class="com.demoshop.tests.SubscriptionTest"/>
+      </group> <!-- Smoke -->
+    </groups>
+    <test started-at="2024-10-11T01:08:24 IST" name="Search Test" finished-at="2024-10-11T01:08:33 IST" duration-ms="8368">
+      <class name="com.demoshop.tests.SearchTest">
+        <test-method is-config="true" signature="initDriver(java.lang.String)[pri:0, instance:com.demoshop.tests.SearchTest@8519cb4]" started-at="2024-10-11T01:08:24 IST" name="initDriver" finished-at="2024-10-11T01:08:31 IST" duration-ms="6920" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method signature="verifyUserIsAbletoSearchDesiredProducts()[pri:0, instance:com.demoshop.tests.SearchTest@8519cb4]" started-at="2024-10-11T01:08:31 IST" name="verifyUserIsAbletoSearchDesiredProducts" finished-at="2024-10-11T01:08:33 IST" duration-ms="1393" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserIsAbletoSearchDesiredProducts -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.demoshop.tests.SearchTest@8519cb4]" started-at="2024-10-11T01:08:33 IST" name="tearDown" finished-at="2024-10-11T01:08:33 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.demoshop.tests.SearchTest -->
+    </test> <!-- Search Test -->
+    <test started-at="2024-10-11T01:08:24 IST" name="Login Test" finished-at="2024-10-11T01:08:33 IST" duration-ms="9084">
+      <class name="com.demoshop.tests.LoginTest">
+        <test-method is-config="true" signature="initDriver(java.lang.String)[pri:0, instance:com.demoshop.tests.LoginTest@52f27fbd]" started-at="2024-10-11T01:08:24 IST" name="initDriver" finished-at="2024-10-11T01:08:31 IST" duration-ms="6998" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method signature="verifyUserIsAbleToLoginWithValidCreds()[pri:0, instance:com.demoshop.tests.LoginTest@52f27fbd]" started-at="2024-10-11T01:08:31 IST" name="verifyUserIsAbleToLoginWithValidCreds" finished-at="2024-10-11T01:08:33 IST" duration-ms="2041" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserIsAbleToLoginWithValidCreds -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.demoshop.tests.LoginTest@52f27fbd]" started-at="2024-10-11T01:08:33 IST" name="tearDown" finished-at="2024-10-11T01:08:33 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.demoshop.tests.LoginTest -->
+    </test> <!-- Login Test -->
+    <test started-at="2024-10-11T01:08:24 IST" name="Subscription Test" finished-at="2024-10-11T01:08:34 IST" duration-ms="9887">
+      <class name="com.demoshop.tests.SubscriptionTest">
+        <test-method is-config="true" signature="initDriver(java.lang.String)[pri:0, instance:com.demoshop.tests.SubscriptionTest@c430e6c]" started-at="2024-10-11T01:08:24 IST" name="initDriver" finished-at="2024-10-11T01:08:31 IST" duration-ms="7051" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method signature="verifyUserIsAbleToSubscribeWithValidEmail()[pri:0, instance:com.demoshop.tests.SubscriptionTest@c430e6c]" started-at="2024-10-11T01:08:31 IST" name="verifyUserIsAbleToSubscribeWithValidEmail" finished-at="2024-10-11T01:08:34 IST" duration-ms="2782" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserIsAbleToSubscribeWithValidEmail -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.demoshop.tests.SubscriptionTest@c430e6c]" started-at="2024-10-11T01:08:34 IST" name="tearDown" finished-at="2024-10-11T01:08:34 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.demoshop.tests.SubscriptionTest -->
+    </test> <!-- Subscription Test -->
+  </suite> <!-- Suite -->
+</testng-results>

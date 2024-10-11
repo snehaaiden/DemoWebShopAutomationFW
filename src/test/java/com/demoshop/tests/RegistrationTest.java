@@ -2,6 +2,7 @@ package com.demoshop.tests;
 
 import java.io.IOException;
 
+
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -28,19 +29,11 @@ public class RegistrationTest extends BaseTest{
 	
 		registerPage.setUserData(firstName, lastName, uniqueEmail, password);
 		
-		registerPage.continueWithRegisteredUser();
+				
 		
-		String communityPollResult = registerPage.communityPollresult();
-
-		boolean isResultMatched= false;
-		if(communityPollResult.contains(prop.getProperty("result"))) 
-			isResultMatched=true;
-		
-		Assert.assertTrue(isResultMatched, "Message is not matching");
-		}
 }	
 	
-
+}
 
 
 

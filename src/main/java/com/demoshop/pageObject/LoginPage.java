@@ -1,5 +1,6 @@
 package com.demoshop.pageObject;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
 import org.openqa.selenium.WebElement;
@@ -11,11 +12,14 @@ import com.demoshop.utils.PageActions;
 public class LoginPage extends PageActions {
 	
 private WebDriver driver;
+JavascriptExecutor js = (JavascriptExecutor)driver;
+
 	
 	public LoginPage(WebDriver driver) {
 		super(driver);
 		this.driver= driver;
 		PageFactory.initElements(driver, this);
+
 		
 	}
 	
@@ -53,6 +57,25 @@ private WebDriver driver;
 	@FindBy(css="[value='Search']")
 	private WebElement searchBtn;
 	
+	@FindBy(xpath="//*[@class='list'] /li[4]\r\n"
+			+ "")
+	private WebElement apparelShoesMenu;
+	
+	@FindBy(xpath="//*[contains(text(),'Blog')]")
+	public WebElement desiredElement;
+	
+	@FindBy(xpath="//*[contains(text(),'Comments')]")
+	public WebElement comment;
+	
+	@FindBy(css="#AddNewComment_CommentText")
+	public WebElement commentText;
+	
+	@FindBy(css="[value=\"New comment\"]")
+	public WebElement addComment;	
+	
+	@FindBy(xpath="//*[contains(text(),'Great Info')]")
+	public WebElement desiredElement2;//wrong locator
+
 	
 	
 	
@@ -97,4 +120,30 @@ private WebDriver driver;
 		setTextBox(searchInput,productName);
 		clickElement(searchBtn);
 	}
+	public void aparelShoesMenu()
+	{
+		clickElement(apparelShoesMenu);
+		}
+	public void selectBlog()
+	{
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("arguments[0].scrollIntoView(true);", desiredElement);
+		clickElement(desiredElement);
 	}
+	public void clickComment()
+	{
+		clickElement(comment);
+	
+		}
+	public void addComment() {
+	 setTextBox(commentText,"Great info"); 
+	 clickElement(addComment);
+		
+	}
+	public String checkAddedComment() {
+	JavascriptExecutor js = (JavascriptExecutor)driver;
+	js.executeScript("arguments[0].scrollIntoView(true);", desiredElement2);
+	return getElementText(desiredElement2);
+
+}
+}
