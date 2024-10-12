@@ -10,6 +10,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.demoshop.utils.PageActions;
+import com.demoshop.utils.WaitUtils;
 
 public class ShoppingCartPage  extends PageActions {
 	
@@ -119,7 +120,9 @@ private WebDriver driver;
 	
 	public void selectCheckbox()
 	{
-		clickElement(checkbox1);
+		WaitUtils.waitUntilClickable(checkbox1, driver);
+		checkbox1.click();
+
 		}
 	public void removeFrmCart()
 	{
