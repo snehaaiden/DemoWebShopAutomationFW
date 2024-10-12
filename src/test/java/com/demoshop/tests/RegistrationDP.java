@@ -7,9 +7,8 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.demoshop.model.Person;
 import com.github.javafaker.Faker;
-
-import model.Person;
 
 public class RegistrationDP extends BaseTest{
 	@Test(dataProvider="getData")

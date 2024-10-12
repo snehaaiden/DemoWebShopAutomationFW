@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 import com.demoshop.utils.PageActions;
+import com.demoshop.utils.WaitUtils;
 
 public class RegisterPage extends PageActions {
 	
@@ -73,9 +74,10 @@ private WebDriver driver;
 	public void continueWithRegisteredUser()
 	{
 		clickElement(continueBtn);
-		waitUntilClickable(excellentBtn);
+	//	waitUntilClickable(excellentBtn);
 		clickElement(excellentBtn);
 		clickElement(VoteBtn);
+		
 
 	}
 	

@@ -8,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.demoshop.utils.PageActions;
+import com.demoshop.utils.WaitUtils;
 
 public class LoginPage extends PageActions {
 	
@@ -73,13 +74,10 @@ JavascriptExecutor js = (JavascriptExecutor)driver;
 	@FindBy(css="[value=\"New comment\"]")
 	public WebElement addComment;	
 	
-	@FindBy(xpath="//*[contains(text(),'Great Info')]")
-	public WebElement desiredElement2;//wrong locator
+	@FindBy(xpath="(//div[@class=\"comment-body\"])[last()]")
+	public WebElement desiredElement2;
 
-	
-	
-	
-	
+		
 	public void navigateToLoginSection() {
 		clickElement(loginHeader);
 	}
@@ -103,15 +101,16 @@ JavascriptExecutor js = (JavascriptExecutor)driver;
 		return getElementText(loggedEmail);
 	}
 	
-	public String verifyNewsLetterEmail(String uniqueEmail) throws InterruptedException {
+	public String verifyNewsLetterEmail(String uniqueEmail,String expectedText) throws InterruptedException {
 	/*	newsLetterEmail.sendKeys(uniqueEmail);
 		newsLetterSubscribeBtn.click();
 		Thread.sleep(2000);
 		return newsLetterSubscribeText.getText();*/
 		setTextBox(newsLetterEmail, uniqueEmail);
 	    clickElement(newsLetterSubscribeBtn);
-		waitUntilVisible(newsLetterSubscribeText);
-		Thread.sleep(2000);
+	//	waitUntilVisible(newsLetterSubscribeText);
+		//Thread.sleep(2000);
+	    WaitUtils.waitUntilTextShows(newsLetterSubscribeText, driver, expectedText);
 		return getElementText(newsLetterSubscribeText);
 	}
 	

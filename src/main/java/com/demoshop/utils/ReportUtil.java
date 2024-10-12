@@ -6,8 +6,7 @@ package com.demoshop.utils;
 import com.aventstack.extentreports.ExtentReports;
 
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-
-import context.Constants;
+import com.demoshop.context.Constants;
 
 public class ReportUtil {
 	

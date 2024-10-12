@@ -1,6 +1,5 @@
 package com.demoshop.tests;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -18,7 +17,7 @@ public class AddCommentInWebsite extends BaseTest {
 		loginPage.clickComment();
 		loginPage.addComment();
 		String checkTheComment = loginPage.checkAddedComment();
-		 
+		 System.out.println(checkTheComment);
 	Assert.assertEquals(checkTheComment,prop.getProperty("comment"), "Your comment is not displayed");
 
 		

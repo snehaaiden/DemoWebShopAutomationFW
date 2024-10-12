@@ -1,12 +1,8 @@
 package com.demoshop.tests;
 
 import java.io.IOException;
-
-
 import java.time.Duration;
 import java.util.Properties;
-import org.testng.annotations.Parameters;
-
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,13 +11,16 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 
+import com.demoshop.context.DriverManager;
 import com.demoshop.pageObject.LoginPage;
 import com.demoshop.pageObject.ProductPage;
 import com.demoshop.pageObject.RegisterPage;
 import com.demoshop.pageObject.ShoppingCartPage;
-import com.demoshop.utils.PageActions;
 import com.demoshop.utils.TestProperties;
+
+
 
 public class BaseTest {
 	WebDriver driver= null;
@@ -40,10 +39,11 @@ public class BaseTest {
 	   
 	   System.out.println(browserName);
 		getDriver(browserName);
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		DriverManager.setDriver(driver);
+		DriverManager.getDriver().manage().window().maximize();
+		DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		String url=prop.getProperty(prop.getProperty("environment"));
-		driver.get(url);
+		DriverManager.getDriver().get(url);
 		initPages();
 		
 	}
@@ -78,7 +78,7 @@ public class BaseTest {
 	
 	@AfterMethod(alwaysRun=true)
 	public void tearDown() {
-		//driver.quit();
+		DriverManager.getDriver().quit();
 	}
 	
 

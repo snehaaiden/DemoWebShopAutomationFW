@@ -1,0 +1,15 @@
+com\demoshop\tests\AddToWishList.class
+com\demoshop\tests\SearchTest.class
+com\demoshop\tests\CommunityPollResult.class
+com\demoshop\tests\FilterBookAddToCompareList.class
+com\demoshop\tests\RemoveItemFrmCartTest.class
+com\demoshop\tests\ExcelRegistrationTest.class
+com\demoshop\tests\RegistrationDP2.class
+com\demoshop\tests\BaseTest.class
+com\demoshop\tests\RegistrationTest.class
+com\demoshop\tests\SubscriptionTest.class
+com\demoshop\tests\AddCommentInWebsite.class
+com\demoshop\tests\EmailAFriendTest.class
+com\demoshop\tests\RegistrationDP.class
+com\demoshop\tests\E2ECheckoutTest.class
+com\demoshop\tests\LoginTest.class
