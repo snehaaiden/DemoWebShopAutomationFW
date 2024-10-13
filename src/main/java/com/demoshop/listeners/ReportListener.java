@@ -3,6 +3,7 @@ package com.demoshop.listeners;
 import java.io.IOException;
 
 
+
 import org.testng.ITestContext;
 
 import org.testng.ITestListener;
@@ -29,6 +30,11 @@ public class ReportListener implements ITestListener {
 	@Override
 	public void onTestSuccess(ITestResult result) {
 		extentTest.get().log(Status.PASS, "Test Passed");
+	}
+	
+	@Override
+	public void onTestSkipped(ITestResult result) {
+		extentTest.get().log(Status.SKIP, "Skipped Passed");
 	}
 
 	@Override
